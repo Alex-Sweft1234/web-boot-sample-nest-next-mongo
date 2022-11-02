@@ -8,7 +8,7 @@ import { UpdateUserDto } from './dto/user.dto';
 
 @ApiTags('User-controller')
 @ApiBearerAuth()
-@Controller(`${process.env.NEST_PREFIX}/private/user`)
+@Controller('api/private/user')
 export class UserController {
   constructor(private readonly userService: UserService) {}
 

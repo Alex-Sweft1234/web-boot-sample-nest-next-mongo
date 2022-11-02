@@ -6,7 +6,7 @@ import { ConstantService } from './constant.service';
 
 @ApiTags('Constant-controller')
 @ApiBasicAuth()
-@Controller(`${process.env.NEST_PREFIX}/constant`)
+@Controller('api/constant')
 export class ConstantController {
   constructor(private readonly constantService: ConstantService) {}
 
@@ -17,7 +17,7 @@ export class ConstantController {
     links: {},
   })
   @UseGuards(BasicGuard)
-  @Get()
+  @Get('get')
   async get() {
     return this.constantService.get();
   }

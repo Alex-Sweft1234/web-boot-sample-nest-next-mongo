@@ -22,5 +22,12 @@
     "skipDefaultLibCheck": true,
     "jsx": "preserve"
   },
-  "include": ["src/server/**/*.ts"]
+  "include": [
+    "src/server/**/*.ts",
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+  ]
+
 }

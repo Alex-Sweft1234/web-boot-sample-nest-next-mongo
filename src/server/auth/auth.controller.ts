@@ -9,7 +9,7 @@ import { UserEmail } from '../_decorators';
 
 @ApiTags('Auth-controller')
 @ApiBasicAuth()
-@Controller(`${process.env.NEST_PREFIX}/auth`)
+@Controller('api/auth')
 export class AuthController {
   constructor(private readonly authService: AuthService) {}
 
