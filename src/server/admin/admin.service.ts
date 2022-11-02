@@ -5,7 +5,8 @@ import { ConfigService } from '@nestjs/config';
 
 @Injectable()
 export class AdminService implements OnModuleInit {
-  constructor(private readonly configService: ConfigService, private server: NextServer) {}
+  private server: NextServer;
+  constructor(private readonly configService: ConfigService) {}
 
   async onModuleInit(): Promise<void> {
     try {

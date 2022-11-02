@@ -1,7 +1,9 @@
 import { Controller, Get, Req, Res } from '@nestjs/common';
 import { Request, Response } from 'express';
 import { AdminService } from './admin.service';
+import { ApiExcludeController } from '@nestjs/swagger';
 
+@ApiExcludeController()
 @Controller('/')
 export class AdminController {
   constructor(private adminService: AdminService) {}

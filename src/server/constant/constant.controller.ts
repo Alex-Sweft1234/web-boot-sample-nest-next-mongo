@@ -6,7 +6,7 @@ import { ConstantService } from './constant.service';
 
 @ApiTags('Constant-controller')
 @ApiBasicAuth()
-@Controller('constant')
+@Controller(`${process.env.NEST_PREFIX}/constant`)
 export class ConstantController {
   constructor(private readonly constantService: ConstantService) {}
 

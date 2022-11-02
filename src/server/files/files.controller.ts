@@ -18,7 +18,7 @@ import { MESSAGE } from './files.constant';
 
 @ApiTags('Files-controller')
 @ApiBearerAuth()
-@Controller('private/files')
+@Controller(`${process.env.NEST_PREFIX}/private/files`)
 export class FilesController {
   constructor(private readonly filesService: FilesService) {}
 
