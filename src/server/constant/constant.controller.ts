@@ -16,7 +16,7 @@ export class ConstantController {
     type: ConstantModel,
     links: {},
   })
-  @UseGuards(BasicGuard)
+  // @UseGuards(BasicGuard)
   @Get('get')
   async get() {
     return this.constantService.get();

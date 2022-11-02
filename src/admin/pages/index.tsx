@@ -7,8 +7,7 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     setLoading(true)
-    fetch('http://localhost:8080/api/constant/get')
-      .then((res) => res.json())
+    fetch('http://localhost:8000/api/constant/get')
       .then((data) => {
         setData(data)
         setLoading(false)
